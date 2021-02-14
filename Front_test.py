@@ -11,7 +11,7 @@ def test_one():
    element = driver.find_element_by_id("content")
    print(element.text)
 
-   if(element.text != "Broken Images"):
+   if(element.text != "Broken Images"): #Verying the Broken Images text
       errors.append("Expected message does not exist on the page")
       
    driver.close()
@@ -27,7 +27,7 @@ def test_two():
    element = driver.find_element_by_id("content")
    print(element.text)
 
-   if "Forgot Password" not in element.text:
+   if "Forgot Password" not in element.text: #Verying the Forgot Password text
       errors.append("Expected message does not exist on the page")
 
    driver.close()
@@ -98,7 +98,7 @@ def test_four():
 
    time.sleep(2)
 
-   if(attr == ""):
+   if(attr == ""): #Verying the text after entering alphabets
       errors.append("We are not able to enter the alphabets")
 
    time.sleep(2)
@@ -142,7 +142,7 @@ def test_five():
    time.sleep(2)
 
    for i in range(len(sortedlist1)):
-      if(sortedlist1[i] != sorted(unsortedlist1)[i]):
+      if(sortedlist1[i] != sorted(unsortedlist1)[i]): #Verying the table1 is sorted or not
          errors.append("Table1 is not sorted by the due amount")
 
    unsortedlist2 = []
@@ -173,7 +173,7 @@ def test_five():
    time.sleep(2)
 
    for i in range(len(sortedlist2)):
-      if(sortedlist2[i] != sorted(unsortedlist2)[i]):
+      if(sortedlist2[i] != sorted(unsortedlist2)[i]): #Verying the table2 is sorted or not
          errors.append("Table2 is not sorted by the due amount")
 
    time.sleep(2)
@@ -201,7 +201,7 @@ def test_six():
 
       print(elementf.text)
 
-      if "Action successful" not in elementf.text:
+      if "Action successful" not in elementf.text: #Verying the Action successful text
          continue
       else:
          break
